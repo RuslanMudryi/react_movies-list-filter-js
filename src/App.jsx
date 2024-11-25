@@ -7,8 +7,8 @@ export const App = () => {
   const [query, setQuery] = useState('');
   const moviesList = moviesFromServer.filter(
     movie =>
-      movie.description.toLowerCase().includes(query.toLowerCase()) ||
-      movie.title.toLowerCase().includes(query.toLowerCase()),
+      movie.description.toLowerCase().includes(query.toLowerCase().trim()) ||
+      movie.title.toLowerCase().includes(query.toLowerCase().trim()),
   );
 
   return (
